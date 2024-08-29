@@ -26,17 +26,6 @@ const createCloudinaryStorage = (folder)=>{
     })
 }
 
-/* const profileImageStorage = new CloudinaryStorage({
-    cloudinary: cloudinary.v2,
-    params: {
-        folder: 'profiles',
-        public_id: (req, file)=>{
-            const fileExtension = extname(file.originalname)
-            const fileName = file.originalname.split(fileExtension)[0]
-            return `${fileName}-${Date.now()}`
-        }
-    }
-}) */
 
 const profileImageStorage = createCloudinaryStorage('profiles');
 
